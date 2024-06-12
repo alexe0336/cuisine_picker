@@ -1,38 +1,11 @@
-// src/plugins/vuetify.js
-import 'vuetify/styles';
-import 'vuetify/styles' // Global CSS has to be imported
+// src/vuetify.js
+
+import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
-import { aliases, mdi } from 'vuetify/iconsets/mdi'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
-const vuetify = createVuetify({
-  icons: {
-    defaultSet: 'mdi',
-    aliases,
-    sets: {
-      mdi,
-    },
-  },
-  theme: {
-    themes: {
-      light: {
-        primary: '#6200ea', // Custom primary color
-      },
-    },
-  },
-  defaults: {
-    VBtn: {
-      density: 'default',
-      size: 'large',
-      rounded: 'lg',
-      color: 'primary',
-      class: 'mx-2 my-4',
-      style: {
-        'background-color': 'aquamarine',
-        'font-size': '1.5em',
-        'padding': '20px'
-      },
-    }
-  },
+export default createVuetify({
+  components,
+  directives,
 })
-
-export default vuetify

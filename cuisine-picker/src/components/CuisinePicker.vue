@@ -5,7 +5,7 @@
         <div v-if="allCuisines.length > 1">
           <v-row>
             <v-col>
-              <v-btn @click="selectCuisine(0)">
+              <v-btn color="primary" @click="selectCuisine(0)">
                 {{ allCuisines[0] }}
               </v-btn>
             </v-col>
