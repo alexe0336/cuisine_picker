@@ -1,18 +1,21 @@
 <template>
   <v-app>
     <v-main>
+      <v-toolbar>
+        <v-toolbar-title class="font-bold">Cuisine Picker 👆</v-toolbar-title>
+      </v-toolbar>
       <v-container class="text-center">
         <div v-if="allCuisines.length > 1">
           <v-row>
             <v-col>
-              <v-btn color="primary" @click="selectCuisine(0)">
+              <v-btn color="primary" size="x-large" rounded="lg" elevation="20" @click="selectCuisine(0)">
                 {{ allCuisines[0] }}
               </v-btn>
             </v-col>
           </v-row>
           <v-row>
             <v-col>
-              <v-btn @click="selectCuisine(1)">
+              <v-btn color="primary" size="x-large" rounded="lg" elevation="20" @click="selectCuisine(1)">
                 {{ allCuisines[1] }}
               </v-btn>
             </v-col>
@@ -45,8 +48,7 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  font-size: 2em;
-  margin-top: 20px;
+.font-bold {
+  font-weight: bold;
 }
 </style>
