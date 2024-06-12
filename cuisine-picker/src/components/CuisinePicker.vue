@@ -6,20 +6,19 @@
       </v-toolbar>
       <v-container class="text-center">
         <div v-if="allCuisines.length > 1">
-          <v-row>
-            <v-col>
-              <v-btn color="primary" size="x-large" rounded="lg" elevation="20" @click="selectCuisine(0)">
-                {{ allCuisines[0] }}
-              </v-btn>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <v-btn color="primary" size="x-large" rounded="lg" elevation="20" @click="selectCuisine(1)">
-                {{ allCuisines[1] }}
-              </v-btn>
-            </v-col>
-          </v-row>
+          <v-col>
+            <v-btn color="primary" size="x-large" rounded="lg" elevation="20" @click="selectCuisine(0)">
+              {{ allCuisines[0] }}
+            </v-btn>
+          </v-col>
+          <v-col>
+            <h1 class="OR-text">OR</h1>
+          </v-col>
+          <v-col>
+            <v-btn color="primary" size="x-large" rounded="lg" elevation="20" @click="selectCuisine(1)">
+              {{ allCuisines[1] }}
+            </v-btn>
+          </v-col>
         </div>
         <div v-else>
           <h1>You picked {{ allCuisines[0] }}!</h1>
@@ -48,6 +47,9 @@ export default {
 </script>
 
 <style scoped>
+.OR-text{
+  font-size: 1.5em;
+}
 .font-bold {
   font-weight: bold;
 }
