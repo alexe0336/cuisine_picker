@@ -1,24 +1,36 @@
 <template>
-  <div>
-    <div v-if="allCuisines.length > 1">
-      <button @click="selectCuisine(0)">
-        {{ allCuisines[0] }}
-      </button>
-      <button @click="selectCuisine(1)">
-        {{ allCuisines[1] }}
-      </button>
-    </div>
-    <div v-else>
-      <h1>You picked {{ allCuisines[0] }}!</h1>
-    </div>
-  </div>
+  <v-app>
+    <v-main>
+      <v-container class="text-center">
+        <div v-if="allCuisines.length > 1">
+          <v-row>
+            <v-col>
+              <v-btn @click="selectCuisine(0)">
+                {{ allCuisines[0] }}
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-btn @click="selectCuisine(1)">
+                {{ allCuisines[1] }}
+              </v-btn>
+            </v-col>
+          </v-row>
+        </div>
+        <div v-else>
+          <h1>You picked {{ allCuisines[0] }}!</h1>
+        </div>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      allCuisines: ['Italian', 'Mexican', 'Chinese', 'Indian', 'Japanese', 'French', 'Thai', 'Spanish', 'Greek', 'American'],
+      allCuisines: ['American', 'Chinese', 'French', 'Indian', 'Italian', 'Japanese', 'Mexican', 'Thai', 'Korean', 'Vietnamese', 'Mediterranean', 'Middle Eastern', 'Caribbean'],
     };
   },
   methods: {
@@ -33,9 +45,8 @@ export default {
 </script>
 
 <style scoped>
-button {
-  font-size: 3em;
-  margin: 30px;
-  padding: 50px 50px;
+h1 {
+  font-size: 2em;
+  margin-top: 20px;
 }
 </style>
